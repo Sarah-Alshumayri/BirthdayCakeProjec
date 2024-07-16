@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.cake {
+    width: 150px;
+    height: 100px;
+    background-color: #f3c9dd;
+    position: relative;
+    margin-top: 50px;
+}
+
+.cake-top {
+    width: 120px;
+    height: 20px;
+    background-color: #89cff0;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.candle {
+    width: 10px;
+    height: 50px;
+    background-color: #ff5f5f;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flame {
+    width: 10px;
+    height: 20px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flicker 0.2s infinite;
+}
+
+@keyframes flicker {
+    0% { transform: translate(-50%, -10%) scale(1); opacity: 1; }
+    25% { transform: translate(-48%, -12%) scale(1.1); opacity: 0.9; }
+    50% { transform: translate(-50%, -8%) scale(0.9); opacity: 0.8; }
+    75% { transform: translate(-52%, -12%) scale(1.1); opacity: 0.9; }
+    100% { transform: translate(-50%, -10%) scale(1); opacity: 1; }
+}
